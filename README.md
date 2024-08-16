@@ -34,3 +34,19 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## About the app:
+
+Your plant identifier website should now be up and running! Users can upload an image of a plant, and the website will use the Google Gemini API to identify the plant and provide important information about it.
+
+Remember to replace your_google_api_key_here with your actual Google API key for the Gemini API.
+
+This setup provides a basic structure for your plant identifier website. You can further enhance it by:
+
+## TODOS
+
+- Implementing error handling and loading states.
+- Adding more styling and responsive design using TailwindCSS.
+- Expanding the database schema to store identified plants and user data.
+- Implementing user authentication and history of identified plants.
+- Let me know if you need any clarification or have any questions about the implementation!
