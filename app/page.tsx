@@ -3,7 +3,9 @@
 import React, { useState } from "react";
 import ImageUpload from "./components/ImageUpload";
 import PlantInfo from "./components/PlantInfo";
-import LoadingSpinner from "./components/LoadingSpinner"; // We'll create this component
+import LoadingSpinner from "./components/LoadingSpinner";
+import Navbar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const [plantInfo, setPlantInfo] = useState<string | null>(null);
@@ -37,11 +39,22 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className="text-4xl font-bold mb-8">Plant Identifier</h1>
-      <ImageUpload onImageUpload={handleImageUpload} isLoading={isLoading} />
-      {isLoading && <LoadingSpinner />}
-      {!isLoading && plantInfo && <PlantInfo info={plantInfo} />}
-    </main>
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-grow flex flex-col items-center justify-start p-8 bg-gray-100">
+        <h1 className="text-4xl font-bold mb-8 text-green-700">
+          AI Plant Identifier
+        </h1>
+        <div className="w-full max-w-2xl">
+          <ImageUpload
+            onImageUpload={handleImageUpload}
+            isLoading={isLoading}
+          />
+          {isLoading && <LoadingSpinner />}
+          {!isLoading && plantInfo && <PlantInfo info={plantInfo} />}
+        </div>
+      </main>
+      <Footer />
+    </div>
   );
 }
