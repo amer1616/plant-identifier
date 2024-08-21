@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import ImageUpload from "./components/ImageUpload";
 import PlantInfo from "./components/PlantInfo";
 import LoadingSpinner from "./components/LoadingSpinner";
-import Navbar from "./components/NavBar";
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export default function Home() {
